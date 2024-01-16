@@ -1,0 +1,422 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+/* css za navigacioni meni */
+.nav {
+  background: #06113C; opacity: 0.8;
+  color:white;
+	position: sticky;
+  margin: auto !important;
+  flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	top: 0;
+}
+h1 {
+  margin-left: 20px;
+  font-size: 27px;
+  text-align: center;
+  transition: all 0.9s ease-out;
+}
+
+h1:hover {
+  animation: move-up-down 0.9s ease-out forwards;
+}
+
+@keyframes move-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nav__item__search{
+  background: #06113C;
+  display: inline-block;
+  margin: 0px 30px;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+ /* za hover preko stranica*/
+ .nav__item {
+  position: relative;
+  transition: transform 0.2s;
+  display: inline-block;
+  padding: 10px 20px;
+  background: 06113C;
+  display: inline-block;
+  margin: 0px 30px;
+  color: white;
+  z-index: 1;
+}
+
+.nav__item:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 100%;
+  border-radius: 50% 0% 50% 0%;
+  background-color: rgba(255, 249, 215, 0);
+  transition: all 0.5s;
+  z-index: -1;
+
+}
+
+.nav__item:hover:after {
+  width: 100%;
+  background-color: #FF8C32;
+}
+
+.nav__item:hover {
+  transform: scale(1.1);
+
+}
+
+/* search deo*/
+.nav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 10px;
+  font-size: 17px;
+  background-color: transparent;
+  color: white;
+  background-color: #FF8C32;
+  border: none;
+}
+
+.nav input[type=text]:focus {
+  background-color: #FF8C32;
+  border-color: rgb(255, 249, 215);
+  border: 1px;
+}
+
+::placeholder{
+  color:  white;
+}
+
+/*HOME CSS*/
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home, .onama, .row{
+  background-image: url("https://www.atomcreativemedia.com/wp-content/uploads/2018/09/orange-and-blue-movies-2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+}
+
+h2{
+  padding-top: 10px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  padding-left: 60px;
+  text-align: center;
+}
+.box {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 20px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 800px;
+}
+
+h3{
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-family: 'Caramel', cursive;
+  text-align: center;
+}
+
+h4{
+  font-size: 20px;
+  text-align: justify;
+  padding-left: 200px;
+  padding-bottom: 20px;
+}
+
+  /* za 2 diva */
+  .flex-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(43,41,78);
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 85%;
+    border-radius: 50% 0% 50% 0%;
+
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 80%;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    background-color: transparent;
+  }
+
+  /*naslov home css*/
+  .home-text {
+    position: relative;
+    transition: transform 0.2s;
+    text-align: center;
+    margin-left: 470px;
+    margin-right: 470px;
+    color: white;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .home-text:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 100%;
+    border-radius: 50% 0% 50% 0%;
+    background-color: rgba(255, 249, 215, 0);
+    transition: all 0.5s;
+    z-index: -1;
+
+  }
+
+  .home-text:hover:after {
+    width: 100%;
+    background-color: #fd9648;
+  }
+  .home-text:hover {
+    transform: scale(1.1);
+
+  }
+
+  /*naslov o nama css*/
+
+  .onama-text {
+    position: relative;
+    transition: transform 0.2s;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    color: white;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .onama-text:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 100%;
+    border-radius: 50% 0% 50% 0%;
+    background-color: rgba(255, 249, 215, 0);
+    transition: all 0.5s;
+    z-index: -1;
+
+  }
+
+  .onama-text:hover:after {
+    width: 100%;
+    background-color:#fd9648 ;
+  }
+  .onama-text:hover {
+    transform: scale(1.1);
+
+  }
+
+  /*FOOTER*/
+  .footer-container {
+    background-color: #5c6e89;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+
+  .footer-text {
+    text-align: center;
+    color: #fff;
+   padding-bottom: 10px;
+   padding-top: 10px;
+    margin: 8px;
+
+  }
+
+  /* css za filmove kartice*/
+  .row{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+	  justify-content: space-evenly;
+
+  }
+
+  .card-img-top{
+    height: 500px;
+    width: 350px;
+
+  }
+
+  .card {
+    border: #06113C;
+    border-radius: 15px;
+    inline-size: 350px;
+    overflow: hidden;
+    background-color: #06113C;
+    opacity: 90%;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
+  }
+
+  .card:hover {
+    transform: scale(1.04);
+
+  }
+
+  .card-title {
+    font-size: 29px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: -10px;
+    margin-top: -7px;
+    background-color: #fd9648;
+    padding-bottom: 7px;
+    padding-top: 5px;
+
+  }
+
+  .card-text {
+    text-align: justify;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    line-height: 40px;
+
+  }
+
+
+  /*dugme dodaj*/
+  .btnDodaj{
+    transition: all .5s ease;
+    color: #FF8C32;
+    line-height: 1;
+    font-size: 17px;
+    background-color : rgb(240, 239, 239);
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    margin-left: 130px;
+  }
+
+  .btnDodaj:hover {
+    color: #f1f1f1;
+    background-color:#5c6e89 ;
+}
+
+ /*za kopiranje*/
+ .btn:hover{
+  cursor: pointer; 
+  }
+
+
+  .dugme-kopiranje {
+    background-color: #5c6e89;
+    color: white; 
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+    border: #f1f1f1;
+    border-bottom: 2px;
+    position: relative;
+  }
+
+  .dugme-kopiranje:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-out;
+  }
+
+  .dugme-kopiranje:hover:before {
+    transform: scaleX(1);
+  }
+
+  .kontejner{
+    background-color: #5c6e89;
+    background: #5c6e89;
+    text-align: right;
+    display:-ms-inline-grid;
+    justify-content: space-between;
+    padding-left: 850px;
+    padding-right: 30px;
+
+
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #06113C;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fd9648;
+    border-radius: 10px;
+  }
